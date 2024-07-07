@@ -8,6 +8,7 @@ docker build -t express-node-app .
 
 docker ps // list running containers
 docker stop container-name // stop the running container
+
 docker rm container-name // remove the container
 docker run --name express-node-app-container -d express-node-app // run the express-node-app image and give the container a name express-node-app-container and run it on the detach mode to hide the running logs
 
@@ -17,3 +18,9 @@ docker run --name express-node-app-container -d express-node-app // run the expr
 
 ///forward the request comming from the port 4000 on the machine to the port 4000 in the container 
 docker run --name express-node-app-container -d -p 4000:4000 express-node-app
+
+build dockerfile ===>> docker image
+
+////run commande inside the container --it = interactive terminal
+
+docker exec -it express-node-app-container bash
