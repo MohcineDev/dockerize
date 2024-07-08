@@ -2,21 +2,24 @@ git config --global credential.helper store
 
 # Docker things
 
-Docker can build images automatically by reading the instructions from a Dockerfile.
+
+> Docker can build images automatically by reading the instructions from a Dockerfile.
 Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image.
 
 ### list running containers
 docker ps
 
 ### list availabel images
-docker images
+> _docker images_
+
 
 #### list hidden images
-docker images -a
+_docker images -a_    
+
+
 
 #### list hidden images in quite mode ( only IDs)
 docker images -aq
-
 
 
 ## build docker file and give the image a name
@@ -44,7 +47,7 @@ docker run --name express-node-app-container -d express-node-app
 ### forward container port to local machine port
 
 ### forward the request comming from the port 4000 on the container to port 8080 on the host machine   
-docker run --name express-node-app-container -d -p 8080:4000 express-node-app
+docker run --name express-node-app-container -d -p 4000:8080 express-node-app
 
 build dockerfile ===>> docker image
 
